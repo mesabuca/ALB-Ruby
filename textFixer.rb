@@ -2,6 +2,9 @@ print "Enter a text:  "
 user_input = gets.chomp
 user_input.downcase!
 
+
+loop do
+
 puts "Is there any place to fix ? y/n"
 answer = gets.chomp
 
@@ -16,7 +19,10 @@ answer = gets.chomp
     	else
      	puts "Nothing to do here!"
    	end
-
+    else
+    break
     end
-  
+
+end  
+
 puts "Your string is: #{user_input}"
