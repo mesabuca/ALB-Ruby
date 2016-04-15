@@ -1,5 +1,5 @@
 def increaser (grades=Array.new, plus)
-    grades.each { |gra| gra+plus }
+    grades.each { |grade| grade+plus }
     return grades
 end
 
