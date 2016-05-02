@@ -9,6 +9,11 @@ def delete
     print "Surname : "
     surname = gets.chomp.capitalize
 
+    unless File.exist?("#{name}#{surname}.txt")
+      puts "There is no one like #{name} #{surname}."
+      break
+    end
+
     rlist.readlines.each do |lines|
       line = lines.split
       if line[0] != name && line[1] != surname
@@ -21,6 +26,4 @@ def delete
 
 end
 
-
-delete
 

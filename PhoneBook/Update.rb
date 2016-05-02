@@ -18,5 +18,6 @@ def update
     puts "Email   :"
     change.puts "#{gets.chomp}"
 
+    break
   end
 end

@@ -11,7 +11,6 @@ def sort
 
 end
 
-sort
 
 =begin
 newlist.readlines.each do |lines|
