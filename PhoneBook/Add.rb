@@ -33,13 +33,17 @@ def add
     f.puts "#{pno}"
     f.puts "#{email}"
     f.close
-    sorted = File.open("Contact/list.txt",'r')
-    sorted.each do |lines|
-      list.puts lines
-    end
     list.close
 
+    sorted = File.open("Contact/list.txt",'r').sort
+    sortedlist = File.open("Contact/newlist.txt",'w')
+    
+    sorted.each do |lines|
+      sortedlist.puts "#{lines}"
+    end
+
     break
+
   end
 end
 

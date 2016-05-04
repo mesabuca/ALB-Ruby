@@ -1,7 +1,8 @@
-unless File.exist?("phonebook.txt")
-  File.open('phonebook.txt', 'w')
+unless File.exist?("Contact/list.txt")
+  File.open('Contact/list.txt','w')
 end
-load "Add.rb"
+
+load 'Add.rb'
 load "Delete.rb"
 load "Display.rb"
 load "Search.rb"
@@ -15,24 +16,26 @@ while true
     process = gets.chomp.downcase
 
     case process
-      when add
+      when "add"
         add
-      when delete
+        sort
+      when "delete"
         delete
         sort
-      when update
+      when "update"
         update
-      when display
+      when "display"
         display
-      when search
+      when "search"
         search
       else
         puts "Wrong input !"
     end
 
   print "Do you want to continue ? y/n"
-  if gets.chomp.downcase == n
+  if gets.chomp.downcase == "n"
     break
   end
+
 end
 

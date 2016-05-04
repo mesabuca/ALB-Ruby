@@ -9,7 +9,7 @@ def delete
     print "Surname : "
     surname = gets.chomp.capitalize
 
-    unless File.exist?("#{name}#{surname}.txt")
+    unless File.exist?("Contact/#{name}#{surname}.txt")
       puts "There is no one like #{name} #{surname}."
       break
     end
